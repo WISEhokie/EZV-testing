@@ -1,12 +1,194 @@
-body {
-  background-color: lightblue;
+  /*
+These color variables are not consistently supported, but I have listed the values here for reference.
+Src = https://brand.vt.edu/identity/color.html
+*/
+
+:root {
+    --vt-maroon:rgb(134, 31, 65);
+    --vt-burntOrange:rgb(229, 117, 31);
+    --vt-hokieStone:rgb(117, 120, 123);
+    --vt-white:rgb(255, 255, 255);
+    --vt-teal:rgb(80, 133, 144);
+    --vt-smoke:rgb(229, 225, 230);
+    --vt-impactOrange:rgb(202, 79, 0);
 }
 
-h1 {
-  color: navy;
-  margin-left: 20 px;
+
+  /*
+NOTE: Some styles must be specified for print media and/or must be inline in order to preserve them upon document completion (mPDF is the extension ezyVet uses to convert html to .pdf and it does not have extended CSS support)
+*/
+
+  /*
+Here is a link to VT's repository of VTH, EMC, & ACCRC logos:
+https://assets.cms.vt.edu/images/email/logos-lockups/veterinary-medicine/
+*/
+
+
+
+.docheader {
+  background-color: none !important;
+  border: none !important;
+}
+
+/*Normalize CSS removes bold effect on print - adding back: */
+strong {
+  font-weight: bold !important;
+}
+/* classic clearfix class */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Override the dotted borders ezyVet gives to tables in the doc temp UI */
+.cke_show_borders  table.cke_show_border, .cke_show_borders  table.cke_show_border > tr > td, .cke_show_borders  table.cke_show_border > tr > th, .cke_show_borders  table.cke_show_border > tbody > tr > td, .cke_show_borders  table.cke_show_border > tbody > tr > th, .cke_show_borders  table.cke_show_border > thead > tr > td, .cke_show_borders  table.cke_show_border > thead > tr > th, .cke_show_borders  table.cke_show_border > tfoot > tr > td, .cke_show_borders  table.cke_show_border > tfoot > tr > th { border: 1px solid #d3d3d3 !important; }
+
+table,
+table * {
+  border-collapse: collapse;
+  page-break-inside: avoid !important;
+}
+
+table, th, td {
+  border: 1px solid #d3d3d3;
+}
+
+th{
+  background-color: #d3d3d3;
+}
+
+table tr:nth-child(odd) {
+  background-color: hsl(0, 0%, 98%);
+}
+.oneH {
+width: 100%;
+}
+/* Animal / Owner Table Styles */
+.AOtable {
+  font-size: 10px;
+  color: #333;
+  border: 1px solid rgb(229, 117, 31);
+  padding: 0px 2px;
+  margin: 12px auto;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(229, 225, 230, 0.3);
+  border-radius: 4px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  overflow: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.AOtable h2 {
+  color: rgb(134, 31, 65);
+  font-weight: bold;
+  border-bottom: 1px solid rgb(229, 117, 31);
+}
+
+/* OR 
+
+a more simple layout
+
+*/
+
+#AOtable {
+  font-size: 10px;
+  padding: 2px;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  background-color: rgba(227, 227, 227, 0.2);
+  overflow: auto;
+}
+
+/* For some reason, lower level headers don't show up as bold in this iframe */
+h3 {
+  font-weight: bold;
+}
+
+/* Document Title Styles */
+.dischargeTitle {
+  background: rgb(135, 31, 65);
+  border: 1px solid rgb(229, 225, 230);
+  padding: 5px 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 14px auto;
+  font-family: acherus grotesque;
+}
+
+/* Subheading format to match native variable headers (non basic consult variables - like history) */
+.hDIV {
+  font-weight: bold;
+  background-color: #d3d3d3;
+  padding: 5px 10px;
+  font-size: 1.3em;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  max-width: 100%;
+  display: flex;
+}
+
+/* Styles for radiograph image table to get them to space out correctly (from the diagnostic results variable) */
+.rads table {
+  width: 100%;
+}
+
+.rads td {
+  min-width: fit-content !important;
+}
+
+/* Decrease the amount of white-space lists take up */
+ul,
+ol {
+  margin-top: 1px;
+  margin-bottom: 2px;
+}
+
+/* Hide the text that precedes recheck instructions (date/time) */
+.revisit::first-line {
+  visibility: hidden;
+  font-size: 0px;
+}
+
+.revisit {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+/* Same as above for print view (I know, this is technically incorrect selection but it's the only way it seems to work) */
+@media print {
+
+  .revisit,
+  p::first-line {
+      visibility: hidden;
+      font-size: 0px;
+  }
+
+  .revisit {
+      margin-top: 1px;
+      margin-bottom: 1px;
+  }
 }
 
 p {
-	writing-mode: vertical-rl
+  margin: 0.5rem 0;
 }
+
+
+/* Note: these fonts won't translate to print */
+body {
+  margin: auto;
+  font-family:crimson text;
+  color: #333;
+}
+
+h1, h2, h3, .hDIV {
+  font-family: acherus grotesque !important;
+  letter-spacing: 0.5px !important;
+  color: #333;
+}
+
+
+
