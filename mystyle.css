@@ -100,6 +100,24 @@ a more simple layout
   overflow: auto;
 }
 
+/* vertically stack the AOtable on mobile devices */
+			@media screen and (max-width: 575px) {
+
+				.AOtable div:has(h2) {
+					display: flex !important;
+					flex-direction: column;
+					width: 100% !important;
+				}
+
+				.AOtable div:has(h2)>div {
+					width: 100% !important;
+				}
+
+				#email-add {
+					display: none;
+				}
+			}
+
 /* For some reason, lower level headers don't show up as bold in this iframe */
 h3 {
   font-weight: bold;
