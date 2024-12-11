@@ -46,7 +46,7 @@ strong {
 table,
 table * {
   border-collapse: collapse;
-  page-break-inside: avoid !important;
+  page-break-inside: avoid !important; /* This may cause background VT image to double on top of each other.. */
 }
 
 table, th, td {
@@ -55,6 +55,9 @@ table, th, td {
 
 th{
   background-color: #d3d3d3;
+/*   background-color: #333;
+     color: #fff;
+*/
 }
 
 table tr:nth-child(odd) {
@@ -197,8 +200,9 @@ p {
 
 /* Note: these fonts won't translate to print */
 body {
-  font-family:crimson text;
+  font-family: crimson text;
   color: #333;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, .hDIV {
