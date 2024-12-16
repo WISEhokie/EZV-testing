@@ -53,14 +53,13 @@ table, th, td {
   border: 1px solid #d3d3d3;
 }
 
-th{
-  background-color: #d3d3d3;
-/*   background-color: #333;
-     color: #fff;
-*/
+th {
+    border: 1px solid gray;
+    font-weight: bold;
+    color: #f3f3f3 !important;
+    background-color: #353535 !important;
 }
-
-table tr:nth-child(odd) {
+table tr:nth-child(odd) td {
   background-color: hsl(0, 0%, 98%);
 }
 .oneH {
