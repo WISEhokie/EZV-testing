@@ -209,6 +209,11 @@ h1, h2, h3, .hDIV {
   letter-spacing: 0.5px !important;
   color: #333;
 }
-
-
+/* necessary for text inputs when printing. Specifying input[type="text"] is ignored. */
+input {
+	width: 100%;
+}
+input[type="radio"], input[type="checkbox"] {
+	width: fit-content;
+}
 
