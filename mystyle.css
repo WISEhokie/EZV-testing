@@ -25,9 +25,9 @@ https://assets.cms.vt.edu/images/email/logos-lockups/veterinary-medicine/
 
 
 
-.docheader {
-  background-color: none !important;
-  border: none !important;
+.docheader, .docheader td {
+  background-color: #fff !important;
+  border-width: 0 !important;
 }
 
 /*Normalize CSS removes bold effect on print - adding back: */
