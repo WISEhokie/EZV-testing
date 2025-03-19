@@ -199,13 +199,13 @@ p {
 
 /* Note: these fonts won't translate to print */
 body {
-  font-family: crimson text;
+  font-family: 'Roboto';
   color: #333;
   box-sizing: border-box;
 }
 
 h1, h2, h3, .hDIV {
-  font-family: acherus grotesque !important;
+  font-family: 'Roboto' !important;
   letter-spacing: 0.5px !important;
   color: #333;
 }
