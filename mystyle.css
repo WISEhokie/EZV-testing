@@ -41,7 +41,17 @@ strong {
   display: table;
 }
 /* Override the dotted borders ezyVet gives to tables in the doc temp UI */
-.cke_show_borders  table.cke_show_border, .cke_show_borders  table.cke_show_border > tr > td, .cke_show_borders  table.cke_show_border > tr > th, .cke_show_borders  table.cke_show_border > tbody > tr > td, .cke_show_borders  table.cke_show_border > tbody > tr > th, .cke_show_borders  table.cke_show_border > thead > tr > td, .cke_show_borders  table.cke_show_border > thead > tr > th, .cke_show_borders  table.cke_show_border > tfoot > tr > td, .cke_show_borders  table.cke_show_border > tfoot > tr > th { border: 1px solid #d3d3d3; }
+.cke_show_borders table.cke_show_border,
+.cke_show_borders table.cke_show_border > tr > td,
+.cke_show_borders table.cke_show_border > tr > th,
+.cke_show_borders table.cke_show_border > tbody > tr > td,
+.cke_show_borders table.cke_show_border > tbody > tr > th,
+.cke_show_borders table.cke_show_border > thead > tr > td,
+.cke_show_borders table.cke_show_border > thead > tr > th,
+.cke_show_borders table.cke_show_border > tfoot > tr > td,
+.cke_show_borders table.cke_show_border > tfoot > tr > th {
+  border: 1px solid #d3d3d3;
+}
 
 table,
 table * {
@@ -60,7 +70,7 @@ th {
     background-color: #353535 !important;
 }
 table tr:nth-child(odd) td {
-  background-color: hsl(0, 0%, 98%);
+  background-color: #fafafa;
 }
 .oneH {
 width: 100%;
@@ -216,3 +226,11 @@ input[type="radio"], input[type="checkbox"] {
 	width: fit-content;
 }
 
+/* Callout / Note Box */
+.note {
+  border: 1px solid rgb(229, 117, 31); /* Burnt Orange border */
+  background: rgba(229, 117, 31, 0.15); /* light orange background */
+  padding: 6px 8px;
+  margin: 8px 0;
+  border-radius: 4px;
+}
